@@ -386,11 +386,7 @@ body {
     margin: auto;
 }
 
-
-/* ============================
-   About section content
-   ============================ */
-
+/* ==============================  About section ======================= */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -466,7 +462,60 @@ body {
 
 
 
-/* Footer============================*/
+/* ==============================  Service Section ======================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+}
+
+.service-card {
+    background: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 2rem;
+    padding: 3rem 2.6rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+    width: 6.4rem;
+    height: 6.4rem;
+    margin: 0 auto 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.service-icon i {
+    font-size: 2.6rem;
+    color: var(--accent-color);
+}
+
+.service-card h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 1.2rem;
+}
+
+.service-card p {
+    font-size: 1.45rem;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+
+
+/*================================ Footer ======================*/
 #footer {
     background-color: var(--footer-bg);
     color: var(--nav-color);
@@ -603,7 +652,6 @@ body {
 
 
 
-
 }
 
 
@@ -621,6 +669,10 @@ body {
 
     #media-block {
         min-height: 30rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 
@@ -664,6 +716,10 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     .footer-grid {
         grid-template-columns: 1.4fr 1fr 1fr 1fr;
