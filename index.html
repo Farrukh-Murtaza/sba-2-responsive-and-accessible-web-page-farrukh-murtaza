@@ -261,13 +261,77 @@
 
         <!-- Contact Form Section -->
         <section id="contact-form" class="section">
-            <div class="container section-title">
+            <div class="container section-title mx-auto">
                 <h2>Contact Us</h2>
                 <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             </div>
 
-            <div class="container">
+            <div class="container mx-auto">
+                <div class="contact-grid">
 
+                    <div class="contact-info">
+                        <h3>Let's Talk</h3>
+                        <p class="lead-text">
+                            Tell us a bit about your project and we'll get back to you within one business day.
+                        </p>
+
+                        <ul class="contact-details">
+                            <li>
+                                <i aria-hidden="true" class="bi bi-geo-alt"></i>
+                                <span>124 Market Street, Suite 200, Philadelphia, PA 19107</span>
+                            </li>
+                            <li>
+                                <i aria-hidden="true" class="bi bi-envelope"></i>
+                                <span>hello@creative.com</span>
+                            </li>
+                            <li>
+                                <i aria-hidden="true" class="bi bi-telephone"></i>
+                                <span>+1 (215) 555-0148</span>
+                            </li>
+                            <li>
+                                <i aria-hidden="true" class="bi bi-clock"></i>
+                                <span>Mon&ndash;Fri, 9am&ndash;6pm ET</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form id="contact-form-el" class="contact-form" aria-describedby="form-note">
+                        <p id="form-note" class="visually-hidden">All fields are required.</p>
+
+                        <div class="form-group">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" name="name" autocomplete="name"
+                                aria-describedby="cf-name-error" aria-required="true">
+                            <p class="form-error" id="cf-name-error" role="alert">Please enter your name.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cf-email">Email Address</label>
+                            <input type="email" id="cf-email" name="email" autocomplete="email"
+                                aria-describedby="cf-email-error" aria-required="true">
+                            <p class="form-error" id="cf-email-error" role="alert">Please enter a valid email
+                                address.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cf-subject">Subject</label>
+                            <input type="text" id="cf-subject" name="subject" aria-describedby="cf-subject-error"
+                                aria-required="true">
+                            <p class="form-error" id="cf-subject-error" role="alert">Please enter a subject.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" name="message" rows="5" aria-describedby="cf-message-error"
+                                aria-required="true"></textarea>
+                            <p class="form-error" id="cf-message-error" role="alert">Please enter a message.</p>
+                        </div>
+
+                        <button type="submit" class="btn-get-started">Send Message</button>
+
+                        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
             </div>
         </section>
 
